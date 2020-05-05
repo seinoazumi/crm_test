@@ -15,8 +15,14 @@
 #  url         :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category_id :integer
+#
+# Indexes
+#
+#  index_facilities_on_category_id  (category_id)
 #
 class Facility < ApplicationRecord
+  belongs_to :category
   with_options presence: true do
     validates :name
     validates :postal_code
