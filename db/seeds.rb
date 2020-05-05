@@ -8,6 +8,12 @@
 
 require 'csv'
 
+5.times do |n|
+  Category.create(name: "カテゴリー#{n}")
+end
+
+Category.create(name: "その他")
+
 CSV.foreach('public/csv/dummy_adress.csv') do |row|
   Facility.create(name: row[0],
                   tel: row[1],
@@ -15,5 +21,6 @@ CSV.foreach('public/csv/dummy_adress.csv') do |row|
                   prefecture: row[3],
                   adress1: row[4],
                   adress2: row[5],
-                  building: row[6])
+                  building: row[6],
+                  category_id: rand(1..6))
 end
