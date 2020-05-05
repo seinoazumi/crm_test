@@ -1,0 +1,40 @@
+%h2= t("page.facilities.new.title")
+
+- if @facility.errors.any?
+  - @facility.errors.full_messages.each do |msg|
+    %ul.form-error-msg
+      %li= msg
+
+= form_with model: @facility, local: true do |f|
+  %p
+    = f.label :name, t("page.facilities.form.name")
+    = f.text_field :name
+  %p
+    = f.label :postal_code, t("page.facilities.form.postal_code")
+    = f.text_field :postal_code
+  %p
+    = f.label :prefecture, t("page.facilities.form.prefecture") 
+    = f.text_field :prefecture
+  %p
+    = f.label :adress1, t("page.facilities.form.adress1") 
+    = f.text_field :adress1
+  %p
+    = f.label :adress2, t("page.facilities.form.adress2") 
+    = f.text_field :adress2
+  %p
+    = f.label :building, t("page.facilities.form.building") 
+    = f.text_field :building
+  %p
+    = f.label :tel, t("page.facilities.form.tel")
+    = f.text_field :tel
+  %p
+    = f.label :fax, t("page.facilities.form.fax") 
+    = f.text_field :fax
+  %p
+    = f.label :url, t("page.facilities.form.url") 
+    = f.text_field :url
+  %p
+    = f.label :description, t("page.facilities.form.description") 
+    = f.text_area :description
+  %p
+    = f.submit t("page.facilities.form.submit")
