@@ -7,6 +7,13 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+    attributes:
+      facility:
+        name: "施設名"
+        postal_code: "郵便番号"
+        prefecture: "都道府県"
+        adress1: "住所１"
+        adress2: "住所２"
   date:
     abbr_day_names:
     - 日
@@ -205,3 +212,26 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+
+  page:
+    facilities:
+      flash:
+        create:
+          notice: "施設が登録されました"
+          alert: "施設情報の登録に失敗しました"
+      new: 
+        title: "施設情報新規登録"
+        contents:
+      form:
+        name: "施設名"
+        postal_code: "郵便番号"
+        prefecture: "都道府県"
+        adress1: "住所１"
+        adress2: "住所２"
+        building: "建物・ビル名"
+        tel: "電話"
+        fax: "FAX"
+        url: "URL"
+        description: "説明"
+        submit: "送信"
+
