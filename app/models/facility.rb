@@ -17,5 +17,12 @@
 #  updated_at  :datetime         not null
 #
 class Facility < ApplicationRecord
+  with_options presence: true do
+    validates :name
+    validates :postal_code
+    validates :prefecture
+    validates :adress1
+    validates :adress2
+  end
   
 end
