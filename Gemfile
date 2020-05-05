@@ -32,6 +32,8 @@ gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
 gem 'rails-i18n'
 gem 'ransack'
 
