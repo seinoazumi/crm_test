@@ -1,6 +1,6 @@
 class FacilitiesController < ApplicationController
   def index
-    @all_adress = Facility.all
+    @all_adress = Facility.all.includes(:category)
   end
 
   def new
