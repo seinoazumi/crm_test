@@ -15,6 +15,11 @@
 #  url         :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category_id :integer
+#
+# Indexes
+#
+#  index_facilities_on_category_id  (category_id)
 #
 require 'rails_helper'
 
